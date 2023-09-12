@@ -23,7 +23,7 @@ def test_raising_widget_capture_exceptions(qtbot, widget):
     assert isinstance(exception, AssertionError)
     assert "_on_button_pressed" in traceback.format_tb(collected_traceback)[0]
 
-# attempts below were naive, and fail, so marking with XFAIL
+# attempts below were not successful so marking with XFAIL
 
 # assertion error raised in Qt event loop, and therefore not caught by pytest.raises
 @pytest.mark.xfail
